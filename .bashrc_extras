@@ -1,0 +1,7 @@
+[ -f ~/.fzf_bash ] && source ~/.fzf_bash
+[ -f ~/.bash_custom ] && source ~/.bash_custom
+export PROMPT_COMMAND='history -a'
+
+bind 'set bell-style none'
+export FZF_DEFAULT_COMMAND='rg --hidden --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
