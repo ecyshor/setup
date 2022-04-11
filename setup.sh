@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-echo "Install curl"
-sudo apt install sbt
-
 echo "Installing vim"
 sudo apt install vim
 
@@ -20,7 +17,7 @@ cp .fzf_bash ~/.fzf_bash
 echo "Setup bashrc extras"
 cat .bashrc_extras >> ~/.bashrc
 
-git config --global user.email "contact@nicu.dev"
+git config --global user.email "nicu.reut@digitalasset.com"
 git config --global user.name "Nicu Reut"
 
 echo "install ncdu"
@@ -32,12 +29,6 @@ sudo apt install ripgrep
 echo "Install java"
 sudo apt install openjdk-11-jre-headless
 sudo apt install openjdk-11-jdk
-
-echo "Install sbt"
-echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add
-sudo apt-get update
-sudo apt-get install sbt
 
 echo "Install httpie"
 sudo apt install httpie
@@ -56,7 +47,7 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
-sudo groupadd docker
+
 sudo usermod -aG docker $USER
 newgrp docker
 sudo systemctl enable docker
@@ -68,3 +59,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 sudo apt install python-pygments
 sudo apt install net-tools
+
+sudo apt install tmux
+cp .tmux.conf ~/.tmux.conf
