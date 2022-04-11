@@ -17,7 +17,7 @@ cp .fzf_bash ~/.fzf_bash
 echo "Setup bashrc extras"
 cat .bashrc_extras >> ~/.bashrc
 
-git config --global user.email "nicu.reut@digitalasset.com"
+git config --global user.email "contact@nicu.dev"
 git config --global user.name "Nicu Reut"
 
 echo "install ncdu"

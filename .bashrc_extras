@@ -5,3 +5,9 @@ export PROMPT_COMMAND='history -a'
 bind 'set bell-style none'
 export FZF_DEFAULT_COMMAND='rg --hidden --files'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# no history duplicates
+export HISTCONTROL=ignoreboth:erasedups
+# no history limit
+HISTSIZE=
+HISTFILESIZE=
+
