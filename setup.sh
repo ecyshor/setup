@@ -4,7 +4,7 @@ set -e
 echo "Installing awesome vim"
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
-cat .vimrc ~/.vim_runtime/my_configs.vim
+cp .vimrc ~/.vim_runtime/my_configs.vim
 
 echo "Setting up the aliases"
 cp .bash_aliases ~/.bash_aliases
@@ -42,7 +42,7 @@ echo \
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
-udo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 sudo usermod -aG docker $USER
 newgrp docker
@@ -50,7 +50,7 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
 
-sudo apt install python-pygments
+sudo apt install python3-pygments
 sudo apt install net-tools
 
 echo "Install tmux"
