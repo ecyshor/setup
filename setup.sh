@@ -59,5 +59,6 @@ cp .tmux.conf ~/.tmux.conf
 
 echo "Setting up nix"
 bash <(curl -sSfL https://nixos.org/nix/install)
-cat .nix.conf >> /etc/nix/nix.conf
+sudo mkdir -p /etc/nix
+sudo cp .nix.conf /etc/nix/nix.conf
 
