@@ -9,9 +9,6 @@ cop .vimrc ~/.vim_runtime/my_configs.vim
 echo "Setting up the aliases"
 cp .bash_aliases ~/.bash_aliases
 
-echo "Install git"
-sudo apt install git
-
 echo "Install fzf"
 sudo apt install fzf
 cp .fzf_bash ~/.fzf_bash
