@@ -4,7 +4,7 @@ set -e
 echo "Installing awesome vim"
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
-cop .vimrc ~/.vim_runtime/my_configs.vim
+cat .vimrc ~/.vim_runtime/my_configs.vim
 
 echo "Setting up the aliases"
 cp .bash_aliases ~/.bash_aliases
