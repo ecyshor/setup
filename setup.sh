@@ -26,10 +26,6 @@ sudo apt install ncdu
 echo "Install ripgrep"
 sudo apt install ripgrep
 
-echo "Install java"
-sudo apt install openjdk-11-jre-headless
-sudo apt install openjdk-11-jdk
-
 echo "Install httpie"
 sudo apt install httpie
 
@@ -51,11 +47,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 newgrp docker
 sudo systemctl enable docker
-
-
-echo "Install docker-compose"
-sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
 
 sudo apt install python-pygments
 sudo apt install net-tools
