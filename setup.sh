@@ -55,6 +55,8 @@ sudo apt install net-tools
 
 echo "Install tmux"
 sudo apt install tmux
+#clone plugin manager 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 cp .tmux.conf ~/.tmux.conf
 
 echo "Setting up nix"
